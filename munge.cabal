@@ -1,0 +1,32 @@
+Name:           Munge
+Version:        0.0
+Cabal-Version:  >= 1.2
+License:        AllRightsReserved
+Author:         Nathan Bloomfield
+Synopsis:       A collection of tiny text filters
+Build-Type:     Simple
+
+Executable i+
+  Main-Is:        Indent.hs
+  Hs-Source-Dirs: src/
+  build-depends:  base
+
+Executable i-
+  Main-Is:        Dedent.hs
+  Hs-Source-Dirs: src/
+  build-depends:  base
+
+Executable a
+  Main-Is:        Align.hs
+  Hs-Source-Dirs: src/
+  build-depends:  base
+
+Executable c
+  Main-Is:        Crunch.hs
+  Hs-Source-Dirs: src/
+  build-depends:  base
+
+Executable frequency
+  Main-Is:        Frequency.hs
+  Hs-Source-Dirs: src/
+  build-depends:  base

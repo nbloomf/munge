@@ -1,0 +1,4 @@
+- bug when the number of 'columns' is not the same in each row. For example, run a on this table twice.
+
+a & b & e \\
+c & d \\
