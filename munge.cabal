@@ -30,3 +30,8 @@ Executable frequency
   Main-Is:        Frequency.hs
   Hs-Source-Dirs: src/
   build-depends:  base
+
+Executable doppler
+  Main-Is:        Doppler.hs
+  Hs-Source-Dirs: src/
+  build-depends:  base
