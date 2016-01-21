@@ -6,7 +6,7 @@ import System.Environment (getArgs)
 import System.Exit (exitWith, exitSuccess, exitFailure)
 
 
--- I am feeling bored today. Let's make a utility
+-- I am feeling bored today. Let's make a thing
 -- so I don't have to keep looking up ANSI color codes.
 
 main :: IO ()

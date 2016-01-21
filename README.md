@@ -12,4 +12,4 @@ A collection of tiny text filters.
 
 ## Why not?
 
-* `doppler` - ansi-color text (doppler-shifted echo? ha ha!)
+* `doppler` - ansi-color stdin (doppler-shifted echo? ha ha!)
