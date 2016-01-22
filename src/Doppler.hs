@@ -16,31 +16,32 @@ main = do
   case args of
     {- foreground only -}
     [fg] -> do
-      text <- getContents
-      case colorize (fg, "null") text of
+      case colorize (fg, "null") of
         Just x  -> putStr x
         Nothing -> showUsage >> exitFailure
 
     {- foreground and background -}
     [fg,bg] -> do
-      text <- getContents
-      case colorize (fg,bg) text of
+      case colorize (fg,bg) of
         Just x  -> putStr x
         Nothing -> showUsage >> exitFailure
 
     {- ruh roh -}
     _ -> showUsage >> exitFailure
 
+  {- echo -}
+  getContents >>= putStr
+
   {- reset colors and intensity -}
   putStr $ "\x1b[0;39;49m"
   exitSuccess
 
 
-colorize :: (String, String) -> String -> Maybe String
-colorize (fg, bg) x = do
+colorize :: (String, String) -> Maybe String
+colorize (fg, bg) = do
   fore <- fgColorCode fg
   back <- bgColorCode bg
-  return $ fore ++ back ++ x
+  return $ fore ++ back
 
 
 -- Is this a terrible way to handle command line args,
